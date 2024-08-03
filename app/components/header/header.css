@@ -1,0 +1,137 @@
+.header {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	background-color: var(--body-color);
+}
+
+.nav {
+	height: calc(var(--header-height) + var(--size-500));
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	column-gap: 1rem;
+}
+
+.nav-logo,
+.nav-toggle {
+	color: var(--title-color);
+	font-weight: var(--fw-medium);
+	transition: var(--transition);
+}
+
+.nav-list {
+	display: flex;
+	column-gap: var(--size-600);
+}
+
+.nav-link {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: var(--fs-400);
+	color: var(--title-color);
+	padding: var(--size-100) var(--size-200);
+	font-weight: var(--fw-medium);
+	transition: var(--transition);
+	border-radius: var(--size-500);
+}
+
+.nav-icon,
+.nav-close,
+.nav-toggle {
+	display: none;
+}
+
+.active-link,
+.nav-link:hover {
+	color: var(--active-color);
+	font-weight: var(--fw-bold);
+}
+
+.theme-switcher {
+	background: none;
+	border: none;
+	cursor: pointer;
+	font-size: var(--fs-400);
+	color: var(--title-color);
+	font-weight: var(--fw-medium);
+}
+
+/* Breakpoints */
+@media screen and (max-width: 768px) {
+	.header {
+		top: initial;
+		bottom: 0;
+	}
+
+	.nav {
+		height: var(--header-height);
+	}
+
+	.nav-menu {
+		position: fixed;
+		bottom: -100%;
+		left: 0;
+		width: 100%;
+		background-color: var(--body-color);
+		padding: var(--size-600) var(--size-500) var(--size-750);
+		box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+		border-radius: var(--size-500) var(--size-500) 0 0;
+		transition: var(--transition);
+	}
+
+	/* Show Menu */
+	.show-menu {
+		bottom: 0;
+	}
+
+	.nav-list {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: var(--size-600);
+	}
+
+	.nav-icon {
+		font-size: var(--size-450);
+	}
+
+	.nav-close {
+		position: absolute;
+		right: var(--size-450);
+		bottom: var(--size-200);
+		font-size: var(--fs-800);
+		cursor: pointer;
+		color: var(--title-color);
+	}
+
+	.nav-close:hover {
+		color: var(--clr-primary-400);
+	}
+
+	.nav-toogle {
+		font-size: 1.1rem;
+		cursor: pointer;
+	}
+
+	.nav-icon,
+	.nav-close,
+	.nav-toggle {
+		display: block;
+		font-size: var(--size-450);
+		cursor: pointer;
+	}
+}
+
+/* For small devices */
+@media screen and (max-width: 350px) {
+	.nav-menu {
+		padding: var(--size-600) var(--size-100) var(--size-750);
+	}
+
+	.nav-list {
+		column-gap: 0;
+	}
+}

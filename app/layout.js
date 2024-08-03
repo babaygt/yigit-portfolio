@@ -1,5 +1,6 @@
 import { Open_Sans } from 'next/font/google'
 import './globals.css'
+import Header from './components/header/Header'
 
 const open_sans = Open_Sans({
 	weight: ['400', '500', '600', '700'],
@@ -15,7 +16,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
 	return (
 		<html lang='en' className={`${open_sans.variable}`}>
-			<body>{children}</body>
+			<body>
+				<Header />
+				{children}
+			</body>
 		</html>
 	)
 }

@@ -28,6 +28,8 @@
 	--text-color: var(--clr-neutral-500);
 	--body-color: var(--clr-accent-500);
 	--container-color: var(--clr-accent-500);
+	--active-color: var(--clr-primary-400);
+	--hover-color: var(--clr-accent-300);
 
 	/** Font Families **/
 	--ff-body: var(--font-open-sans);
@@ -61,10 +63,42 @@
 	--size-600: 2rem;
 	--size-650: 2.5rem;
 	--size-700: 3rem;
+	--size-750: 4rem;
 	--size-800: 4.5rem;
 	--size-900: 6rem;
 
 	--header-height: var(--size-700);
+
+	--transition: 0.4s ease;
+}
+
+:root[data-theme='light'] {
+	/** Color Palette **/
+
+	/** Accent Colors **/
+	--clr-accent-600: hsl(0, 0%, 100%); /* White */
+	--clr-accent-500: hsl(0, 0%, 95%); /* Light Grey */
+	--clr-accent-400: hsl(0, 0%, 80%); /* Lighter Grey */
+	--clr-accent-300: hsl(0, 0%, 60%); /* Light Grey */
+	--clr-accent-100: hsl(0, 0%, 40%); /* Medium Grey */
+
+	/** Primary Color **/
+	--clr-primary-400: hsl(0, 0%, 0%); /* Black */
+
+	/** Neutral Colors **/
+	--clr-neutral-900: hsl(0, 0%, 100%); /* White */
+	--clr-neutral-800: hsl(0, 0%, 90%); /* Lightest Grey */
+	--clr-neutral-700: hsl(0, 0%, 80%); /* Lighter Grey */
+	--clr-neutral-600: hsl(0, 0%, 60%); /* Light Grey */
+	--clr-neutral-500: hsl(0, 0%, 40%); /* Medium Grey */
+	--clr-neutral-400: hsl(0, 0%, 20%); /* Dark Grey */
+	--clr-neutral-100: hsl(0, 0%, 0%); /* Black */
+
+	--title-color: var(--clr-neutral-400);
+	--text-color: var(--clr-neutral-500);
+	--body-color: var(--clr-accent-500);
+	--container-color: var(--clr-accent-500);
+	--active-color: var(--clr-primary-400);
 }
 
 /** Global Styles **/
@@ -79,6 +113,8 @@
 
 html {
 	scroll-behavior: smooth;
+	color: var(--text-color);
+	transition: var(--transition);
 }
 
 body,
@@ -100,6 +136,7 @@ h2,
 h3 {
 	font-family: var(--ff-heading);
 	color: var(--title-color);
+	transition: var(--transition);
 }
 
 ul {
@@ -130,12 +167,14 @@ img {
 .section-title {
 	font-size: var(--fs-850);
 	color: var(--title-color);
+	transition: var(--transition);
 }
 
 .section-subtitle {
 	display: block;
 	font-size: var(--fs-400);
 	margin-bottom: var(--size-700);
+	transition: var(--transition);
 }
 
 .section-title,
@@ -165,6 +204,7 @@ img {
 	color: var(--clr-primary-400);
 	background-color: var(--clr-neutral-400);
 	border-radius: var(--size-400);
+	transition: var(--transition);
 }
 
 .button:hover {
