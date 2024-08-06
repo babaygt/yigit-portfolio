@@ -30,6 +30,8 @@
 	--container-color: var(--clr-accent-500);
 	--active-color: var(--clr-primary-400);
 	--hover-color: var(--clr-accent-300);
+	--box-color: var(--clr-accent-400);
+	--border-color-rgba: 255, 255, 255, 0.15;
 
 	/** Font Families **/
 	--ff-body: var(--font-open-sans);
@@ -47,6 +49,7 @@
 	--fs-500: 1rem;
 	--fs-600: 1.125rem;
 	--fs-700: 1.25rem;
+	--fs-750: 1.375rem;
 	--fs-800: 1.5rem;
 	--fs-850: 2.25rem;
 	--fs-900: 3.5rem;
@@ -99,6 +102,8 @@
 	--body-color: var(--clr-accent-500);
 	--container-color: var(--clr-accent-500);
 	--active-color: var(--clr-primary-400);
+	--box-color: var(--clr-neutral-800);
+	--border-color-rgba: 0, 0, 0, 0.15;
 }
 
 /** Global Styles **/
