@@ -46,7 +46,7 @@ export const projectsData = [
 		id: 4,
 		title: 'Portfolio',
 		description:
-			'This is my portfolio website. It is a single page application built with React. It is responsive and has a dark mode feature.',
+			'This is my portfolio website. It is a single page application built with Next.js. It is responsive and has a dark mode feature.',
 		image: 'personal-blog-project-image.png',
 		technologies: ['Next.js', 'React', 'JavaScript', 'CSS', 'HTML'],
 		githubLink: 'https://github.com/babaygt/yigit-portfolio',
