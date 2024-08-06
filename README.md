@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Yigit Baba's Portfolio Website
+
+This is the portfolio website of Yigit Baba, a full-stack software developer based in Berlin. It showcases his projects, skills, and provides ways to contact him.
+
+## Demo
+
+The project is live and can be viewed here: [yigitbaba.com](https://www.yigitbaba.com/)
+
+## Features
+
+- Responsive design with dark mode support
+- Detailed sections for Home, About, Projects, and Contact
+- Projects showcase with images and technology stack
+- Contact section with direct links to email and LinkedIn
+
+## Technologies Used
+
+- **Next.js**
+- **React**
+- **JavaScript**
+- **HTML**
+- **CSS**
 
 ## Getting Started
 
-First, run the development server:
+To run this project locally, follow these steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. Clone the repository:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+   ```bash
+   git clone https://github.com/babaygt/yigit-portfolio.git
+   cd yigit-portfolio
+   ```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+2. Install dependencies:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+   ```bash
+   npm install
+   # or
+   yarn install
+   # or
+   pnpm install
+   # or
+   bun install
+   ```
 
-## Learn More
+3. Run the development server:
 
-To learn more about Next.js, take a look at the following resources:
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   # or
+   pnpm dev
+   # or
+   bun dev
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## License
 
-## Deploy on Vercel
+This project is open source and available under the [MIT License](LICENSE).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Inspiration
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Parts of this project were inspired by Cryptical Coder's portfolio project on YouTube. You can check out his YouTube channel [here](https://www.youtube.com/@CrypticalCoder).
