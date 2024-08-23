@@ -44,7 +44,7 @@ const Header = () => {
 									activeNav === '#home' ? 'nav-link active-link' : 'nav-link'
 								}
 							>
-								<i class='fi fi-rs-house-chimney nav-icon'></i> Home
+								<i className='fi fi-rs-house-chimney nav-icon'></i> Home
 							</Link>
 						</li>
 
@@ -57,7 +57,7 @@ const Header = () => {
 									activeNav === '#about' ? 'nav-link active-link' : 'nav-link'
 								}
 							>
-								<i class='fi fi-rs-user nav-icon'></i> About
+								<i className='fi fi-rs-user nav-icon'></i> About
 							</Link>
 						</li>
 
@@ -73,7 +73,7 @@ const Header = () => {
 										: 'nav-link'
 								}
 							>
-								<i class='fi fi-rs-apps nav-icon'></i> Projects
+								<i className='fi fi-rs-apps nav-icon'></i> Projects
 							</Link>
 						</li>
 
@@ -87,7 +87,7 @@ const Header = () => {
 									activeNav === '#contact' ? 'nav-link active-link' : 'nav-link'
 								}
 							>
-								<i class='fi fi-rs-envelope nav-icon'></i> Contact
+								<i className='fi fi-rs-envelope nav-icon'></i> Contact
 							</Link>
 						</li>
 					</ul>
