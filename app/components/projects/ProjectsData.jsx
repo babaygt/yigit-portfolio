@@ -1,10 +1,72 @@
 export const projectsData = [
 	{
 		id: 1,
+		title: 'EatyQ',
+		description:
+			'EatyQ enables users to effortlessly create and manage interactive, QR code-based digital menus.',
+		images: [
+			'eatyq-project-image.png',
+			'eatyq-project-image-1.png',
+			'eatyq-project-image-2.png',
+			'eatyq-project-image-3.png',
+			'eatyq-project-image-4.png',
+			'eatyq-project-image-5.png',
+			'eatyq-project-image-6.png',
+			'eatyq-project-image-7.png',
+			'eatyq-project-image-8.png',
+			'eatyq-project-image-9.png',
+			'eatyq-project-image-10.png',
+			'eatyq-project-image-11.png',
+		],
+		technologies: [
+			'TypeScript',
+			'Node.js',
+			'Express',
+			'MongoDB',
+			'Mongoose',
+			'React',
+			'TanStack Query',
+			'Zustand',
+			'ShadcnUI',
+			'Tailwind',
+		],
+		githubLink: 'https://github.com/babaygt/eatyq',
+	},
+	{
+		id: 2,
+		title: 'Santral Yayin Dagitim Landing Page',
+		description:
+			'Professional landing page for a publishing distribution company based in Turkey in the education sector.',
+		images: [
+			'santralyayindagirtim.project-image.png',
+			'santralyayindagirtim.project-image-1.png',
+			'santralyayindagirtim.project-image-2.png',
+			'santralyayindagirtim.project-image-3.png',
+			'santralyayindagirtim.project-image-4.png',
+			'santralyayindagirtim.project-image-5.png',
+			'santralyayindagirtim.project-image-6.png',
+		],
+		technologies: [
+			'Next.js',
+			'React',
+			'JavaScript',
+			'HTML',
+			'CSS',
+			'Bootstrap',
+		],
+		projectLink: 'https://www.santraldagitim.com/',
+	},
+	{
+		id: 3,
 		title: 'Safe Bike',
 		description:
 			'Safe Bike is a Next.js project aimed at improving cycling safety. The website features an interactive map where users can create cycling routes, view route instructions, and locate bicycle stores, crash sites, and construction zones.',
-		image: 'safe-bike-project-image.png',
+		images: [
+			'safe-bike-project-image.png',
+			'safe-bike-project-image-1.png',
+			'safe-bike-project-image-2.png',
+			'safe-bike-project-image-3.png',
+		],
 		technologies: [
 			'Next.js',
 			'React',
@@ -17,20 +79,32 @@ export const projectsData = [
 		githubLink: 'https://github.com/babaygt/safe-bike',
 	},
 	{
-		id: 2,
+		id: 4,
 		title: 'Reading Time Calculator',
 		description:
 			'Reading Time Calculator is a Chrome extension that calculates the reading time of a web page with presets for different reading speeds (slow, average, fast).',
-		image: 'reading-time-calculator-project-image.png',
+		images: [
+			'reading-time-calculator-project-image.png',
+			'reading-time-calculator-project-image-1.png',
+		],
 		technologies: ['JavaScript', 'HTML', 'CSS'],
 		githubLink: 'https://github.com/babaygt/reading-time-calculator',
 	},
 	{
-		id: 3,
+		id: 5,
 		title: 'Trip Track',
 		description:
 			'Trip Track is a route sharing social media platform that allows users to create, share, and discover road trips with various waypoints. Users can choose different vehicle types, share descriptions, interact with other users, and much more.',
-		image: 'trip-track-project-image.png',
+		images: [
+			'trip-track-project-image.png',
+			'trip-track-project-image-1.png',
+			'trip-track-project-image-2.png',
+			'trip-track-project-image-3.png',
+			'trip-track-project-image-4.png',
+			'trip-track-project-image-5.png',
+			'trip-track-project-image-6.png',
+			'trip-track-project-image-7.png',
+		],
 		technologies: [
 			'React',
 			'Redux Toolkit',
@@ -43,11 +117,11 @@ export const projectsData = [
 		githubLink: 'https://github.com/babaygt/trip-track',
 	},
 	{
-		id: 4,
+		id: 6,
 		title: 'Portfolio',
 		description:
 			'This is my portfolio website. It is a single page application built with Next.js. It is responsive and has a dark mode feature.',
-		image: 'personal-blog-project-image.png',
+		images: ['personal-blog-project-image.png'],
 		technologies: ['Next.js', 'React', 'JavaScript', 'CSS', 'HTML'],
 		githubLink: 'https://github.com/babaygt/yigit-portfolio',
 	},

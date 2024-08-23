@@ -1,5 +1,8 @@
 import { Open_Sans } from 'next/font/google'
 import './globals.css'
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
 import Header from './components/header/Header'
 import Footer from './components/footer/Footer'
 
