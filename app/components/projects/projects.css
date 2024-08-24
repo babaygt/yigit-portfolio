@@ -43,12 +43,30 @@
 	justify-content: center;
 	align-items: center;
 	cursor: pointer;
-	opacity: 0;
-	transition: opacity 0.3s ease;
+	transition: opacity 0.3s ease, background-color 0.3s ease;
+	z-index: 2;
 }
 
-.project-image-container:hover .thumbnail-nav {
-	opacity: 1;
+/* For larger screens, keep the hover effect */
+@media (hover: hover) and (pointer: fine) {
+	.thumbnail-nav {
+		opacity: 0;
+	}
+
+	.project-image-container:hover .thumbnail-nav {
+		opacity: 1;
+	}
+}
+
+/* For mobile and touch devices, always show the navigation */
+@media (hover: none) or (pointer: coarse) {
+	.thumbnail-nav {
+		opacity: 1;
+	}
+}
+
+.thumbnail-nav:hover {
+	background-color: rgba(0, 0, 0, 0.7);
 }
 
 .thumbnail-nav.prev {
@@ -57,6 +75,11 @@
 
 .thumbnail-nav.next {
 	right: 10px;
+}
+
+.thumbnail-nav svg {
+	width: 20px;
+	height: 20px;
 }
 
 .image-count {
@@ -251,12 +274,22 @@
 	.project-technologies {
 		grid-template-columns: repeat(2, 1fr);
 	}
+
+	.thumbnail-nav {
+		width: 40px;
+		height: 40px;
+	}
 }
 
 @media screen and (max-width: 576px) {
 	.project-link-container {
 		flex-direction: column;
 		gap: var(--size-300);
+	}
+
+	.thumbnail-nav svg {
+		width: 24px;
+		height: 24px;
 	}
 }
 
