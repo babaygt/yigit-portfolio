@@ -1,3 +1,4 @@
+import { GoogleAnalytics } from '@next/third-parties/google'
 import { Open_Sans } from 'next/font/google'
 import './globals.css'
 import 'swiper/css'
@@ -25,6 +26,7 @@ export default function RootLayout({ children }) {
 				{children}
 				<Footer />
 			</body>
+			<GoogleAnalytics gaId='G-RCKCLS0TDT' />
 		</html>
 	)
 }
