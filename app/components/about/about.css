@@ -79,7 +79,7 @@
 }
 
 .skills-content {
-	grid-template-columns: repeat(4, 1fr);
+	grid-template-columns: repeat(5, 1fr);
 	gap: var(--size-200);
 	margin-bottom: var(--size-600);
 }

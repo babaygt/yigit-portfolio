@@ -8,7 +8,14 @@ import {
 	RiReactjsFill,
 } from 'react-icons/ri'
 
-import { SiMongodb } from 'react-icons/si'
+import {
+	SiMongodb,
+	SiPrisma,
+	SiPostgresql,
+	SiMongoose,
+	SiExpress,
+	SiTypescript,
+} from 'react-icons/si'
 
 const Skills = () => {
 	return (
@@ -20,6 +27,16 @@ const Skills = () => {
 			</div>
 
 			<div className='skills-content grid'>
+				<div className='skills-box'>
+					<RiJavascriptFill className='skills-icon' />
+					<h3 className='skills-title'>JavaScript</h3>
+				</div>
+
+				<div className='skills-box'>
+					<SiTypescript className='skills-icon' />
+					<h3 className='skills-title'>TypeScript</h3>
+				</div>
+
 				<div className='skills-box'>
 					<RiHtml5Fill className='skills-icon' />
 					<h3 className='skills-title'>HTML</h3>
@@ -36,11 +53,6 @@ const Skills = () => {
 				</div>
 
 				<div className='skills-box'>
-					<RiJavascriptFill className='skills-icon' />
-					<h3 className='skills-title'>JavaScript</h3>
-				</div>
-
-				<div className='skills-box'>
 					<RiReactjsFill className='skills-icon' />
 					<h3 className='skills-title'>React</h3>
 				</div>
@@ -54,10 +66,29 @@ const Skills = () => {
 					<RiNodejsFill className='skills-icon' />
 					<h3 className='skills-title'>Node.js</h3>
 				</div>
+				<div className='skills-box'>
+					<SiExpress className='skills-icon' />
+					<h3 className='skills-title'>Express</h3>
+				</div>
 
 				<div className='skills-box'>
 					<SiMongodb className='skills-icon' />
 					<h3 className='skills-title'>MongoDB</h3>
+				</div>
+
+				<div className='skills-box'>
+					<SiMongoose className='skills-icon' />
+					<h3 className='skills-title'>Mongoose</h3>
+				</div>
+
+				<div className='skills-box'>
+					<SiPostgresql className='skills-icon' />
+					<h3 className='skills-title'>PostgreSQL</h3>
+				</div>
+
+				<div className='skills-box'>
+					<SiPrisma className='skills-icon' />
+					<h3 className='skills-title'>Prisma</h3>
 				</div>
 			</div>
 		</div>
