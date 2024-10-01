@@ -121,8 +121,9 @@
 
 	.nav-close {
 		position: absolute;
-		right: var(--size-450);
+		left: 50%;
 		bottom: var(--size-200);
+		transform: translateX(-50%);
 		font-size: var(--fs-800);
 		cursor: pointer;
 		color: var(--title-color);

@@ -98,6 +98,10 @@ const Header = () => {
 					></i>
 				</div>
 
+				<div className='nav-toggle' onClick={() => setToggleMenu(!toggleMenu)}>
+					<i className='fi fi-sr-menu-burger nav-toggle'></i>
+				</div>
+
 				{/* Theme switcher button */}
 				<button
 					className={toggleMenu ? 'theme-switcher show-menu' : 'theme-switcher'}
@@ -109,10 +113,6 @@ const Header = () => {
 						<i className='fi fi-rr-moon' title='Switch to dark mode'></i>
 					)}
 				</button>
-
-				<div className='nav-toggle' onClick={() => setToggleMenu(!toggleMenu)}>
-					<i className='fi fi-sr-menu-burger nav-toggle'></i>
-				</div>
 			</nav>
 		</header>
 	)
