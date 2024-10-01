@@ -14,6 +14,28 @@ const Header = () => {
 		const savedTheme = localStorage.getItem('theme') || 'dark'
 		setTheme(savedTheme)
 		document.documentElement.setAttribute('data-theme', savedTheme)
+
+		const handleScroll = () => {
+			const sections = ['home', 'about', 'projects', 'contact']
+			const scrollPosition = window.scrollY
+
+			for (const section of sections) {
+				const element = document.getElementById(section)
+				if (element) {
+					const { offsetTop, offsetHeight } = element
+					if (
+						scrollPosition >= offsetTop - 100 &&
+						scrollPosition < offsetTop + offsetHeight - 100
+					) {
+						setActiveNav(`#${section}`)
+						break
+					}
+				}
+			}
+		}
+
+		window.addEventListener('scroll', handleScroll)
+		return () => window.removeEventListener('scroll', handleScroll)
 	}, [])
 
 	// Effect to apply the theme to the document and save it to local storage
@@ -35,61 +57,32 @@ const Header = () => {
 
 				<div className={toggleMenu ? 'nav-menu show-menu' : 'nav-menu'}>
 					<ul className='nav-list'>
-						{/* Home */}
-						<li className='nav-item'>
-							<Link
-								href='#home'
-								onClick={() => setActiveNav('#home')}
-								className={
-									activeNav === '#home' ? 'nav-link active-link' : 'nav-link'
-								}
-							>
-								<i className='fi fi-rs-house-chimney nav-icon'></i> Home
-							</Link>
-						</li>
-
-						{/* About */}
-						<li className='nav-item'>
-							<Link
-								href='#about'
-								onClick={() => setActiveNav('#about')}
-								className={
-									activeNav === '#about' ? 'nav-link active-link' : 'nav-link'
-								}
-							>
-								<i className='fi fi-rs-user nav-icon'></i> About
-							</Link>
-						</li>
-
-						{/* Projects */}
-
-						<li className='nav-item'>
-							<Link
-								href='#projects'
-								onClick={() => setActiveNav('#projects')}
-								className={
-									activeNav === '#projects'
-										? 'nav-link active-link'
-										: 'nav-link'
-								}
-							>
-								<i className='fi fi-rs-apps nav-icon'></i> Projects
-							</Link>
-						</li>
-
-						{/* Contact */}
-
-						<li className='nav-item'>
-							<Link
-								href='#contact'
-								onClick={() => setActiveNav('#contact')}
-								className={
-									activeNav === '#contact' ? 'nav-link active-link' : 'nav-link'
-								}
-							>
-								<i className='fi fi-rs-envelope nav-icon'></i> Contact
-							</Link>
-						</li>
+						{['home', 'about', 'projects', 'contact'].map((item) => (
+							<li key={item} className='nav-item'>
+								<Link
+									href={`#${item}`}
+									onClick={() => setActiveNav(`#${item}`)}
+									className={
+										activeNav === `#${item}`
+											? 'nav-link active-link'
+											: 'nav-link'
+									}
+								>
+									<i
+										className={`fi fi-rs-${
+											item === 'home'
+												? 'house-chimney'
+												: item === 'about'
+												? 'user'
+												: item === 'projects'
+												? 'apps'
+												: 'envelope'
+										} nav-icon`}
+									></i>{' '}
+									{item.charAt(0).toUpperCase() + item.slice(1)}
+								</Link>
+							</li>
+						))}
 					</ul>
 
 					<i
