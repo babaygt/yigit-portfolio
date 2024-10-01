@@ -104,7 +104,7 @@ const Header = () => {
 					onClick={toggleTheme}
 				>
 					{theme === 'dark' ? (
-						<i className='fi fi-rr-sun' title='Switch to light mode'></i>
+						<i className='fi fi-rr-brightness' title='Switch to light mode'></i>
 					) : (
 						<i className='fi fi-rr-moon' title='Switch to dark mode'></i>
 					)}
