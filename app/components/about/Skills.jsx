@@ -1,3 +1,5 @@
+import CloudRunIcon from '../icons/CloudRunIcon'
+
 import {
 	RiNextjsFill,
 	RiHtml5Fill,
@@ -15,6 +17,7 @@ import {
 	SiMongoose,
 	SiExpress,
 	SiTypescript,
+	SiDocker,
 } from 'react-icons/si'
 
 const Skills = () => {
@@ -89,6 +92,16 @@ const Skills = () => {
 				<div className='skills-box'>
 					<SiPrisma className='skills-icon' />
 					<h3 className='skills-title'>Prisma</h3>
+				</div>
+
+				<div className='skills-box'>
+					<SiDocker className='skills-icon' />
+					<h3 className='skills-title'>Docker</h3>
+				</div>
+
+				<div className='skills-box'>
+					<CloudRunIcon />
+					<h3 className='skills-title'>Cloud Run</h3>
 				</div>
 			</div>
 		</div>
