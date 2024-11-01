@@ -1,6 +1,31 @@
 export const projectsData = [
 	{
 		id: 1,
+		title: 'Purify',
+		description:
+			'AI-powered code analysis and refactoring assistant that helps developers maintain clean, efficient, and maintainable code.',
+		images: [
+			'purify-project-image-1.png',
+			'purify-project-image-2.png',
+			'purify-project-image-3.png',
+			'purify-project-image-4.png',
+			'purify-project-image-5.png',
+			'purify-project-image-6.png',
+			'purify-project-image-7.png',
+		],
+		technologies: [
+			'TypeScript',
+			'Next.js',
+			'React',
+			'ShadcnUI',
+			'Tailwind',
+			'OpenAI API',
+			'React Markdown',
+		],
+		githubLink: 'https://github.com/babaygt/purify',
+	},
+	{
+		id: 2,
 		title: 'What I Use',
 		description:
 			'What I Use is a modern web application that allows users to showcase the tools, apps, and gear that power their workflow.',
@@ -31,7 +56,7 @@ export const projectsData = [
 		githubLink: 'https://github.com/babaygt/whatiuse',
 	},
 	{
-		id: 2,
+		id: 3,
 		title: 'EatyQ',
 		description:
 			'EatyQ enables users to effortlessly create and manage interactive, QR code-based digital menus.',
@@ -64,7 +89,7 @@ export const projectsData = [
 		githubLink: 'https://github.com/babaygt/eatyq',
 	},
 	{
-		id: 3,
+		id: 4,
 		title: 'Santral Yayin Dagitim Landing Page',
 		description:
 			'Professional landing page for a publishing distribution company based in Turkey in the education sector.',
@@ -88,7 +113,7 @@ export const projectsData = [
 		projectLink: 'https://www.santraldagitim.com/',
 	},
 	{
-		id: 4,
+		id: 5,
 		title: 'Safe Bike',
 		description:
 			'Safe Bike is a Next.js project aimed at improving cycling safety. The website features an interactive map where users can create cycling routes, view route instructions, and locate bicycle stores, crash sites, and construction zones.',
@@ -110,7 +135,7 @@ export const projectsData = [
 		githubLink: 'https://github.com/babaygt/safe-bike',
 	},
 	{
-		id: 5,
+		id: 6,
 		title: 'Reading Time Calculator',
 		description:
 			'Reading Time Calculator is a Chrome extension that calculates the reading time of a web page with presets for different reading speeds (slow, average, fast).',
@@ -122,7 +147,7 @@ export const projectsData = [
 		githubLink: 'https://github.com/babaygt/reading-time-calculator',
 	},
 	{
-		id: 6,
+		id: 7,
 		title: 'Trip Track',
 		description:
 			'Trip Track is a route sharing social media platform that allows users to create, share, and discover road trips with various waypoints. Users can choose different vehicle types, share descriptions, interact with other users, and much more.',
@@ -148,7 +173,7 @@ export const projectsData = [
 		githubLink: 'https://github.com/babaygt/trip-track',
 	},
 	{
-		id: 7,
+		id: 8,
 		title: 'Portfolio',
 		description:
 			'This is my portfolio website. It is a single page application built with Next.js. It is responsive and has a dark mode feature.',
