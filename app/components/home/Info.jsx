@@ -6,9 +6,7 @@ const Info = () => {
       <p className="home-description">
         Hi, I&apos;m Yiğit, a passionate Developer based in Berlin, currently
         working as a Working Student Full Stack Software Developer at SAP,
-        focusing on Applied AI Topics. I approach challenges with a scientific
-        mindset and love building projects and products that solve real-world
-        problems.
+        focusing on Applied AI Topics.
       </p>
     </div>
   );
