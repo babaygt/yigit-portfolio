@@ -1,0 +1,132 @@
+---
+import '../styles/header.css';
+---
+
+<header class='header'>
+  <nav class='nav container'>
+    <a href='/' class='nav-logo'>Yigit</a>
+
+    <div class='nav-menu' id='nav-menu'>
+      <ul class='nav-list'>
+        <li class='nav-item'>
+          <a href='#home' class='nav-link active-link' data-section='home'>
+            <i class='fi fi-rs-house-chimney nav-icon'></i> Home
+          </a>
+        </li>
+        <li class='nav-item'>
+          <a href='#about' class='nav-link' data-section='about'>
+            <i class='fi fi-rs-user nav-icon'></i> About
+          </a>
+        </li>
+        <li class='nav-item'>
+          <a href='#projects' class='nav-link' data-section='projects'>
+            <i class='fi fi-rs-apps nav-icon'></i> Projects
+          </a>
+        </li>
+        <li class='nav-item'>
+          <a href='#contact' class='nav-link' data-section='contact'>
+            <i class='fi fi-rs-envelope nav-icon'></i> Contact
+          </a>
+        </li>
+      </ul>
+
+      <i class='fi fi-rs-cross nav-close' id='nav-close'></i>
+    </div>
+
+    <div class='nav-toggle' id='nav-toggle'>
+      <i class='fi fi-sr-menu-burger nav-toggle'></i>
+    </div>
+
+    <button class='theme-switcher' id='theme-switcher'>
+      <i
+        class='fi fi-rr-brightness'
+        id='theme-icon-light'
+        title='Switch to light mode'></i>
+      <i
+        class='fi fi-rr-moon'
+        id='theme-icon-dark'
+        title='Switch to dark mode'
+        style='display:none;'></i>
+    </button>
+  </nav>
+</header>
+
+<script>
+  const navMenu = document.getElementById('nav-menu');
+  const navToggle = document.getElementById('nav-toggle');
+  const navClose = document.getElementById('nav-close');
+  const navLinks = document.querySelectorAll('.nav-link');
+  const themeSwitcher = document.getElementById('theme-switcher');
+  const iconLight = document.getElementById('theme-icon-light');
+  const iconDark = document.getElementById('theme-icon-dark');
+
+  // Mobile menu toggle
+  navToggle?.addEventListener('click', () => {
+    navMenu?.classList.toggle('show-menu');
+    themeSwitcher?.classList.toggle('show-menu');
+  });
+
+  navClose?.addEventListener('click', () => {
+    navMenu?.classList.remove('show-menu');
+    themeSwitcher?.classList.remove('show-menu');
+  });
+
+  // Close menu when a nav link is clicked
+  navLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+      navMenu?.classList.remove('show-menu');
+      themeSwitcher?.classList.remove('show-menu');
+    });
+  });
+
+  // Theme toggle
+  function updateThemeIcons() {
+    const theme = document.documentElement.getAttribute('data-theme');
+    if (iconLight && iconDark) {
+      if (theme === 'dark') {
+        iconLight.style.display = '';
+        iconDark.style.display = 'none';
+      } else {
+        iconLight.style.display = 'none';
+        iconDark.style.display = '';
+      }
+    }
+  }
+
+  updateThemeIcons();
+
+  themeSwitcher?.addEventListener('click', () => {
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+    updateThemeIcons();
+  });
+
+  // Scroll-based active nav highlighting
+  const sections = ['home', 'about', 'projects', 'contact'];
+
+  function updateActiveNav() {
+    const scrollPosition = window.scrollY;
+    for (const section of sections) {
+      const element = document.getElementById(section);
+      if (element) {
+        const { offsetTop, offsetHeight } = element;
+        if (
+          scrollPosition >= offsetTop - 100 &&
+          scrollPosition < offsetTop + offsetHeight - 100
+        ) {
+          navLinks.forEach((link) => {
+            link.classList.remove('active-link');
+            if (link.getAttribute('data-section') === section) {
+              link.classList.add('active-link');
+            }
+          });
+          break;
+        }
+      }
+    }
+  }
+
+  window.addEventListener('scroll', updateActiveNav);
+</script>

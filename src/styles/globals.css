@@ -34,8 +34,8 @@
 	--border-color-rgba: 255, 255, 255, 0.15;
 
 	/** Font Families **/
-	--ff-body: var(--font-open-sans);
-	--ff-heading: var(--font-open-sans);
+	--ff-body: 'Open Sans', sans-serif;
+	--ff-heading: 'Open Sans', sans-serif;
 
 	/** Font Weights **/
 	--fw-regular: 400;

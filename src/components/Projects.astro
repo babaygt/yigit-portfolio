@@ -1,0 +1,17 @@
+---
+import '../styles/projects.css';
+import { projectsData } from '../data/projects.js';
+import Project from './Project.jsx';
+---
+
+<section class='projects section' id='projects'>
+  <h2 class='section-title'>Projects</h2>
+
+  <div class='projects-container container grid'>
+    {
+      projectsData.map((project) => (
+        <Project client:visible project={project} />
+      ))
+    }
+  </div>
+</section>
