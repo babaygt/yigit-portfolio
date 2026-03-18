@@ -1,16 +1,35 @@
 ---
 import '../styles/projects.css';
 import { projectsData } from '../data/projects.js';
-import Project from './Project.jsx';
 ---
 
 <section class='projects section' id='projects'>
   <h2 class='section-title'>Projects</h2>
 
-  <div class='projects-container container grid'>
+  <div class='projects-list container'>
     {
       projectsData.map((project) => (
-        <Project client:visible project={project} />
+        <a
+          href={project.githubLink || project.projectLink}
+          target='_blank'
+          rel='noopener noreferrer'
+          class='project-row'
+        >
+          <div class='project-info'>
+            <h3 class='project-name'>{project.title}</h3>
+            <p class='project-desc'>{project.description}</p>
+          </div>
+
+          <div class='project-tags'>
+            {project.technologies.map((tech) => (
+              <span class='project-tag'>{tech}</span>
+            ))}
+          </div>
+
+          <span class='project-arrow'>
+            <i class='fi fi-rr-arrow-small-right' />
+          </span>
+        </a>
       ))
     }
   </div>
